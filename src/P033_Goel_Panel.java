@@ -11,7 +11,6 @@ import java.util.TimerTask;
  */
 public class P033_Goel_Panel {
 	Color lightBlue=new Color(0,0,182,155);
-	private JFrame frame;
 	private JPanel panel;
 	private JLabel label1;
 	private JLabel label2;
@@ -47,10 +46,6 @@ public class P033_Goel_Panel {
 		}		
 		
 		Box box=Box.createVerticalBox();
-		frame=new JFrame();
-		frame.setVisible(true);
-		frame.setSize(600, 400);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		panel=new JPanel();
 		panel.setBackground(lightBlue);
 		
@@ -64,7 +59,6 @@ public class P033_Goel_Panel {
 		box.add(label3);
 		
 		panel.add(box);
-		frame.add(panel);
 	}
 	
 	/**
@@ -97,10 +91,6 @@ public class P033_Goel_Panel {
 			}
 		
 		Box box=Box.createVerticalBox();
-		frame=new JFrame();
-		frame.setVisible(true);
-		frame.setSize(600, 400);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		panel=new JPanel();
 		
 		/*
@@ -128,7 +118,6 @@ public class P033_Goel_Panel {
 		box.add(label3);
 		
 		panel.add(box);
-		frame.add(panel);
 	}
 	
 	/**
