@@ -1,4 +1,7 @@
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+
 import javax.swing.*;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -48,10 +51,13 @@ public class P033_Goel_Panel {
 		Box box=Box.createVerticalBox();
 		panel=new JPanel();
 		panel.setBackground(lightBlue);
+		panel.setSize(new Dimension(100,100));
 		
 		label1=new JLabel("Yathartha");
+		label1.setFont(new Font("Papyrus",Font.PLAIN,12));
 		label1.setAlignmentX(JLabel.CENTER_ALIGNMENT);
 		label2=new JLabel("Goel");
+		label2.setFont(new Font("Papyrus",Font.PLAIN,12));
 		label2.setAlignmentX(JLabel.CENTER_ALIGNMENT);
 		
 		box.add(label1);
@@ -92,6 +98,7 @@ public class P033_Goel_Panel {
 		
 		Box box=Box.createVerticalBox();
 		panel=new JPanel();
+		panel.setSize(new Dimension(100,100));
 		
 		/*
 		 * Sets the background of the panel depending on whether the value passed is
@@ -110,8 +117,10 @@ public class P033_Goel_Panel {
 		
 		label1=new JLabel("Yathartha");
 		label1.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+		label1.setFont(new Font("Papyrus",Font.PLAIN,12));
 		label2=new JLabel("Goel");
 		label2.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+		label2.setFont(new Font("Papyrus",Font.PLAIN,12));
 		
 		box.add(label1);
 		box.add(label2);
