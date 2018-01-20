@@ -54,10 +54,10 @@ public class P033_Goel_Panel {
 		panel.setSize(new Dimension(100,100));
 		
 		label1=new JLabel("Yathartha");
-		label1.setFont(new Font("Papyrus",Font.PLAIN,12));
+		label1.setFont(new Font("Papyrus",Font.PLAIN,10));
 		label1.setAlignmentX(JLabel.CENTER_ALIGNMENT);
 		label2=new JLabel("Goel");
-		label2.setFont(new Font("Papyrus",Font.PLAIN,12));
+		label2.setFont(new Font("Papyrus",Font.PLAIN,10));
 		label2.setAlignmentX(JLabel.CENTER_ALIGNMENT);
 		
 		box.add(label1);
@@ -117,10 +117,10 @@ public class P033_Goel_Panel {
 		
 		label1=new JLabel("Yathartha");
 		label1.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-		label1.setFont(new Font("Papyrus",Font.PLAIN,12));
+		label1.setFont(new Font("Papyrus",Font.PLAIN,10));
 		label2=new JLabel("Goel");
 		label2.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-		label2.setFont(new Font("Papyrus",Font.PLAIN,12));
+		label2.setFont(new Font("Papyrus",Font.PLAIN,10));
 		
 		box.add(label1);
 		box.add(label2);
