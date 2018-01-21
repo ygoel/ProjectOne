@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 
 import javax.swing.*;
@@ -12,60 +11,13 @@ import java.util.TimerTask;
  * @version 1.0
  *
  */
-public class P033_Goel_Panel {
-	Color lightBlue=new Color(0,0,182,155);
-	private JPanel panel;
+public class P033_Goel_Panel extends JPanel {
+	Color lightBlue=new Color(90,150,255);
 	private JLabel label1;
 	private JLabel label2;
 	private JLabel label3;
 	int counter=0;
 	Timer timer=new Timer();
-	
-	/**
-	 * This constructor sets the text for all the labels and initializes the panel.
-	 */
-	public P033_Goel_Panel(){
-		label3= new JLabel();
-		
-		/*
-		 * This is a time class which displays a number that increments every second 
-		 * using threads.
-		 */
-		try{
-		TimerTask task=new TimerTask(){
-			public void run(){
-				if(counter==9){
-					counter=-1;
-				}
-				++counter;
-				label3.setText(Integer.toString(counter));
-				label3.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-			}
-		};
-		timer.scheduleAtFixedRate(task, 1000, 1000);
-		
-		}catch(Exception e){
-			System.out.println("There was an exception thrown at the timer class : "+e);
-		}		
-		
-		Box box=Box.createVerticalBox();
-		panel=new JPanel();
-		panel.setBackground(lightBlue);
-		panel.setSize(new Dimension(100,100));
-		
-		label1=new JLabel("Yathartha");
-		label1.setFont(new Font("Papyrus",Font.PLAIN,10));
-		label1.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-		label2=new JLabel("Goel");
-		label2.setFont(new Font("Papyrus",Font.PLAIN,10));
-		label2.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-		
-		box.add(label1);
-		box.add(label2);
-		box.add(label3);
-		
-		panel.add(box);
-	}
 	
 	/**
 	 * This constructor sets the text for all the labels and initializes the panel.
@@ -88,6 +40,7 @@ public class P033_Goel_Panel {
 					++counter;
 					label3.setText(Integer.toString(counter));
 					label3.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+					label3.setFont(new Font("Papyrus",Font.BOLD,16));
 				}
 			};
 			timer.scheduleAtFixedRate(task, 1000, 1000);
@@ -97,8 +50,6 @@ public class P033_Goel_Panel {
 			}
 		
 		Box box=Box.createVerticalBox();
-		panel=new JPanel();
-		panel.setSize(new Dimension(100,100));
 		
 		/*
 		 * Sets the background of the panel depending on whether the value passed is
@@ -106,10 +57,10 @@ public class P033_Goel_Panel {
 		 */
 		try{
 		if(value%2==0){
-			panel.setBackground(Color.WHITE);
+			this.setBackground(Color.WHITE);
 		}
 		else{
-			panel.setBackground(lightBlue);
+			this.setBackground(lightBlue);
 		}
 		}catch(ArithmeticException e){
 			System.out.println(e);
@@ -117,24 +68,15 @@ public class P033_Goel_Panel {
 		
 		label1=new JLabel("Yathartha");
 		label1.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-		label1.setFont(new Font("Papyrus",Font.PLAIN,10));
+		label1.setFont(new Font("Papyrus",Font.BOLD,16));
 		label2=new JLabel("Goel");
 		label2.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-		label2.setFont(new Font("Papyrus",Font.PLAIN,10));
+		label2.setFont(new Font("Papyrus",Font.BOLD,16));
 		
 		box.add(label1);
 		box.add(label2);
 		box.add(label3);
 		
-		panel.add(box);
-	}
-	
-	/**
-	 * This function initializes the class and its constructor.
-	 * @param args
-	 */
-	public static void main(String args[]){
-		new P033_Goel_Panel(2);
-	}
-
+		this.add(box);
+	}	
 }
